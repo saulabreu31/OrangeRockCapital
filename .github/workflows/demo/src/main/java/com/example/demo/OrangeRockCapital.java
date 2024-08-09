@@ -1,13 +1,11 @@
 package com.example.demo;
 
-import java.awt.Font;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class OrangeRockCapital {
-	public static void main(String[] args) {
+	static void main(String[] args) {
         // Create the main frame
         JFrame frame = new JFrame("OrangeRock Capital");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
