@@ -1,31 +1,28 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.awt.BorderLayout;
+import java.awt.Font;
 
-@SpringBootApplication
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 public class OrangeRockCapital {
-	public static void main(String[] args) {
-        // Create the main frame
-        JFrame frame = new JFrame("OrangeRock Capital");
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Orange Rock Capital");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
-        frame.setLayout(new BorderLayout());
+        frame.setSize(400, 300);
 
-        // Header
-        JLabel headerLabel = new JLabel("OrangeRock Capital", JLabel.CENTER);
-        headerLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        frame.add(headerLabel, BorderLayout.NORTH);
+        JPanel panel = new JPanel(new BorderLayout());
+        JLabel label = new JLabel("Welcome to Orange Rock Capital");
+        label.setFont(new Font("Arial", Font.BOLD, 16));
 
-        // Navigation
-        JPanel navPanel = new JPanel();
-        navPanel.setLayout(new FlowLayout());
-        String[] navItems = {"News", "Blog", "USA Market", "Europe Market", "Asian Market", "World Market", "YouTube"};
-        for (String item : navItems) {
-            JButton button = new JButton(item);
-            navPanel.add(button);
-        }
-        frame.add(navPanel, BorderLayout.CENTER);
+        panel.add(label, BorderLayout.CENTER);
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+
 
         // Main Content
         JPanel mainPanel = new JPanel();
@@ -67,10 +64,6 @@ public class OrangeRockCapital {
         JLabel footerLabel = new JLabel("© 1990s My Website. All rights reserved.", JLabel.CENTER);
         frame.add(footerLabel, BorderLayout.SOUTH);
 
-        frame.setVisible(true);
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
