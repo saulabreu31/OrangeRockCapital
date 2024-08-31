@@ -3,9 +3,12 @@ package com.example.demo;
 import java.awt.BorderLayout;
 import java.awt.Font;
 
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class OrangeRockCapital {
     public static void main(String[] args) {
@@ -17,12 +20,7 @@ public class OrangeRockCapital {
         JLabel label = new JLabel("Welcome to Orange Rock Capital");
         label.setFont(new Font("Arial", Font.BOLD, 16));
 
-        panel.add(label, BorderLayout.CENTER);
-        frame.add(panel);
-        frame.setVisible(true);
-    }
-}
-
+        panel.add(label, BorderLayout.NORTH);
 
         // Main Content
         JPanel mainPanel = new JPanel();
@@ -58,12 +56,15 @@ public class OrangeRockCapital {
         contactPanel.add(new JLabel("To contact me, please send an email to email@example.com. That's how things were done in the 90s!"));
         mainPanel.add(contactPanel);
 
-        frame.add(new JScrollPane(mainPanel), BorderLayout.SOUTH);
+        // Add the mainPanel to a JScrollPane
+        frame.add(new JScrollPane(mainPanel), BorderLayout.CENTER);
 
         // Footer
         JLabel footerLabel = new JLabel("© 1990s My Website. All rights reserved.", JLabel.CENTER);
         frame.add(footerLabel, BorderLayout.SOUTH);
 
-	}
-
+        // Set the frame visibility to true
+        frame.setVisible(true);
+    }
 }
+
