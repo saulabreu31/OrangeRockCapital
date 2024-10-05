@@ -1,3 +1,4 @@
+package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,7 @@ public class OrangeRockCapitalApplication {
 }
 
 @RestController
-class HelloController {
+class WelcomeController {
     @GetMapping("/")
     public String hello() {
         return "Welcome to Orange Rock Capital!";
